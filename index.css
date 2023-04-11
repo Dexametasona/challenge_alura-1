@@ -1,1 +1,155 @@
-/*# sourceMappingURL=index.css.map */
+*, ::after, ::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #E4E4C6;
+  display: grid;
+  grid-template: repeat(3, min-content)/repeat(4, 1fr);
+  color: #967C7B;
+}
+body h1 {
+  font-size: 2rem;
+  grid-column: span 4;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+body main {
+  display: flex;
+  grid-column: span 4;
+  flex-direction: column;
+  padding: 1rem;
+}
+body main .info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body main .info img {
+  width: 1rem;
+}
+body main .btns {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 1rem 0;
+}
+body main .btns a {
+  text-align: center;
+  text-decoration: none;
+  padding: 1rem 1.5rem;
+  border-radius: 1rem;
+  border-color: transparent;
+  margin-bottom: 1rem;
+  background-color: #E3B0AF;
+  font-size: 1.5rem;
+  color: #967C7B;
+  box-shadow: 0 4px 4px 1px rgba(0, 0, 0, 0.604);
+  transition: all ease-in-out 0.5s;
+}
+body main .btns a:hover {
+  background-color: rgba(227, 176, 175, 0.5);
+}
+body article {
+  display: flex;
+  grid-column: span 4;
+  flex-direction: column;
+  position: relative;
+}
+body article .output {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem;
+}
+body article .output .chart {
+  margin-bottom: 1rem;
+  outline: none;
+}
+body article .output button {
+  padding: 1rem 1.5rem;
+  border-radius: 1rem;
+  border-color: transparent;
+  margin-bottom: 1rem;
+  background-color: #E3B0AF;
+  font-size: 1.5rem;
+  color: #967C7B;
+  box-shadow: 0 4px 4px 1px rgba(0, 0, 0, 0.604);
+  transition: all ease-in-out 0.5s;
+}
+body article .output button:hover {
+  background-color: rgba(227, 176, 175, 0.5);
+}
+body article #messageBox {
+  background-color: #969674;
+  color: #E4E4C6;
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+}
+body .chart {
+  background-color: #969674;
+  border: none;
+  border-radius: 1rem;
+  color: #AFCDE3;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  resize: none;
+  padding: 0.5rem;
+  outline: none;
+  box-shadow: 0 4px 4px 1px rgba(0, 0, 0, 0.604);
+}
+body .chart:focus {
+  outline: 4px solid #967C7B;
+}
+
+@media screen and (min-width: 440px) {
+  .btns {
+    flex-direction: row !important;
+  }
+  h1 {
+    font-size: 4rem !important;
+  }
+}
+@media screen and (min-width: 700px) {
+  main, article {
+    grid-column: span 2 !important;
+  }
+  main a, article a {
+    padding: 0.5rem 0.5rem !important;
+  }
+  article {
+    padding: 1rem;
+  }
+  article #messageBox {
+    position: static !important;
+    width: 80% !important;
+    margin: auto;
+    box-shadow: 0 4px 4px 1px rgba(0, 0, 0, 0.604);
+  }
+  .chart {
+    padding: 1rem !important;
+  }
+}
+@media screen and (min-width: 830px) {
+  .btns a {
+    padding: 1rem 1.5rem !important;
+  }
+}
+@media screen and (min-width: 950px) {
+  main {
+    grid-column: span 3 !important;
+  }
+  article {
+    grid-column: span 1 !important;
+  }
+  #messageBox {
+    font-size: 1.5rem;
+  }
+}/*# sourceMappingURL=index.css.map */
