@@ -18,6 +18,8 @@ function encrypt(){
             }
         });
         chartOutput.value=encryptPhrase;
+        chartInput.value="";
+        hiddenCopy(false)
     }
     else{
         message()
@@ -38,12 +40,19 @@ function decrypt(){
             }
         }); 
         chartOutput.value = decryptedPhrase;
+        chartInput.value="";
+        hiddenCopy(false)
+    }
+    else{
+        message()
     }
 
 }
 /* copy to chart output to input */
 function copy(){
     chartInput.value=chartOutput.value;
+    chartOutput.value="";
+    hiddenCopy(true)
 }
 
 function validation(){
@@ -57,4 +66,16 @@ function message(){
     setTimeout(()=>{
         messageBox.hidden=true;
     },3000)
+}
+
+function hiddenCopy(show){
+    const btn_copy=document.getElementById("btn_copy");
+    if(!show){
+        btn_copy.classList.add("show")
+        chartOutput.classList.add("showChart")
+    }
+    else{
+        btn_copy.classList.remove("show")
+        chartOutput.classList.remove("showChart")
+    }
 }

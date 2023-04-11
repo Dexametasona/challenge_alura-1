@@ -10,20 +10,20 @@
 <body>
     <h1>Encryptador</h1>
     <main>
-        <textarea class="chart" name="chartInbox" id="chartInput" cols="30" rows="10"></textarea>
+        <textarea class="chart" name="chartInbox" placeholder="ingrese el texto aquí" id="chartInput" cols="30" rows="10"></textarea>
         <div class="info">
             <img src="assets/info_icon.svg" alt="info_icon">
             <p>Solo letras y sin acentos</p>
         </div>
         <div class="btns">
-            <a href="#outputBox" onclick="encrypt()">Encriptador</a>
-            <a href="#outputBox" onclick="decrypt()">Desencriptador</a>
+            <a href="#outputBox" onclick="encrypt()">Encriptar</a>
+            <a href="#outputBox" onclick="decrypt()">Desencriptar</a>
         </div>
     </main>
     <article id="outputBox">
         <div class="output">
             <textarea class="chart" name="chartOutput" id="chartOutput" cols="30" rows="10" readonly></textarea>
-            <button onclick="copy()">Copiar</button>
+            <button id="btn_copy" onclick="copy()">Copiar</button>
         </div>
         <div id="messageBox" hidden>
             <strong>Mensaje vacío o Inválido</strong>

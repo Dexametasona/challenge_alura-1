@@ -5,6 +5,7 @@
 }
 
 html {
+  opacity: 0.9;
   scroll-behavior: smooth;
 }
 
@@ -54,7 +55,7 @@ body main .btns a {
   transition: all ease-in-out 0.5s;
 }
 body main .btns a:hover {
-  background-color: rgba(227, 176, 175, 0.5);
+  background-color: rgba(227, 176, 175, 0.3);
 }
 body article {
   display: flex;
@@ -70,6 +71,8 @@ body article .output {
 body article .output .chart {
   margin-bottom: 1rem;
   outline: none;
+  background-image: url("assets/search.webp");
+  background-size: cover;
 }
 body article .output button {
   padding: 1rem 1.5rem;
@@ -81,9 +84,11 @@ body article .output button {
   color: #967C7B;
   box-shadow: 0 4px 4px 1px rgba(0, 0, 0, 0.604);
   transition: all ease-in-out 0.5s;
+  opacity: 0;
+  visibility: hidden;
 }
 body article .output button:hover {
-  background-color: rgba(227, 176, 175, 0.5);
+  background-color: rgba(227, 176, 175, 0.3);
 }
 body article #messageBox {
   background-color: #969674;
@@ -107,8 +112,20 @@ body .chart {
 }
 body .chart:focus {
   outline: 4px solid #967C7B;
+  background-color: rgba(150, 150, 116, 0.8);
 }
 
+.show {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.showChart {
+  background-color: #969674;
+  background-image: none !important;
+}
+
+/* phone */
 @media screen and (min-width: 440px) {
   .btns {
     flex-direction: row !important;
@@ -117,6 +134,7 @@ body .chart:focus {
     font-size: 4rem !important;
   }
 }
+/* tablet */
 @media screen and (min-width: 700px) {
   main, article {
     grid-column: span 2 !important;
@@ -137,11 +155,13 @@ body .chart:focus {
     padding: 1rem !important;
   }
 }
+/* tablet */
 @media screen and (min-width: 830px) {
   .btns a {
     padding: 1rem 1.5rem !important;
   }
 }
+/*desktop */
 @media screen and (min-width: 950px) {
   main {
     grid-column: span 3 !important;
